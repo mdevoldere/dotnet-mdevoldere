@@ -13,6 +13,7 @@ namespace MDevoldere.Threads
             Thread t = new Thread(new ThreadStart(action));
             t.Start();
             t.Join();
+            Task.Factory.StartNew(action);
         }
     }
 }
